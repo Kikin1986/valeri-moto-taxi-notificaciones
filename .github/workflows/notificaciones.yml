@@ -5,9 +5,18 @@ on:
     - cron: "*/5 * * * *"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: notificaciones-valeri-moto-taxi
+  cancel-in-progress: false
+
 jobs:
   notificar:
+    name: Revisar solicitudes y notificar conductores
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Descargar el código
