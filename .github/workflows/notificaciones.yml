@@ -8,6 +8,7 @@ on:
 jobs:
   notificar:
     runs-on: ubuntu-latest
+
     steps:
       - name: Descargar el código
         uses: actions/checkout@v4
@@ -20,7 +21,7 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Ejecutar comprobación de solicitudes
+      - name: Procesar solicitudes y notificaciones
         env:
           FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
         run: node notificar.js
