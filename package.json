@@ -1,0 +1,13 @@
+{
+  "name": "valeri-moto-taxi-notificaciones",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Notificaciones automáticas de Valeri's Moto Taxi",
+  "main": "notificar.js",
+  "scripts": {
+    "start": "node notificar.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.0.0"
+  }
+}
